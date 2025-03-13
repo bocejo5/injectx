@@ -15,6 +15,9 @@ push = true
 "src/injectx/__init__.py" = [
     '^__version__ = "{version}"$',
 ]
+"README.md" = [
+    'version {version} \({date}\)',
+]
 "pyproject.toml" = [
     '^version = "{version}"$',
     '^current_version = "{version}"$',
@@ -30,10 +33,19 @@ description = "Natural language request to json converter library"
 readme = "README.md"
 requires-python = ">=3.11.5"
 classifiers = [
+    "Development Status :: 4 - Beta",  # Change to "5 - Production/Stable" when ready
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+keywords = ["ioc", "dependency injection", "inversion of control"]
+license = {text = "MIT"}
 [tool.setuptools.dynamic]
 version = {attr = "injectx.__version__"}  # Dynamically fetch version
 dependencies = {file = ["requirements.txt"]}
