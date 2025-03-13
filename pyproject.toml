@@ -44,10 +44,13 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-keywords = ["ioc", "dependency injection", "inversion of control"]
+keywords = ["ioc", "dependency injection", "inversion of control", "automatic class loader"]
 license = {text = "MIT"}
 [tool.setuptools.dynamic]
 version = {attr = "injectx.__version__"}  # Dynamically fetch version
 dependencies = {file = ["requirements.txt"]}
 [project.urls]
-Homepage = "TODO"
+Homepage = "https://github.com/bocejo5/injectx"
+Documentation = "https://github.com/bocejo5/injectx"
+Repository = "https://github.com/bocejo5/injectx"
+Issues = "https://github.com/bocejo5/injectx/issues"
