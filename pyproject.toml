@@ -3,19 +3,16 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [bumpver]
-current_version = "0.0.7"
+current_version = "0.0.1"
 version_pattern = "MAJOR.MINOR.PATCH"
 commit_message = "[ROBOT] bump version to {new_version} [ci skip]"
 tag_message = "[ROBOT] {new_version} [ci skip]"
-tag_scope = "default"
-pre_commit_hook = ""
-post_commit_hook = ""
 commit = true
 tag = true
 push = true
 
 [bumpver.file_patterns]
-"src/inject-x/__init__.py" = [
+"src/injectx/__init__.py" = [
     '^__version__ = "{version}"$',
 ]
 "pyproject.toml" = [
@@ -26,7 +23,6 @@ push = true
 [project]
 name = "inject-x"
 dynamic = ["dependencies"]
-version = "0.0.1"
 authors = [
   { name="Colageo Mirko", email="mirko.colageo@gmail.com" },
 ]
@@ -39,6 +35,7 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 [tool.setuptools.dynamic]
+version = {attr = "injectx.__version__"}  # Dynamically fetch version
 dependencies = {file = ["requirements.txt"]}
 [project.urls]
-Homepage = "https://almatoolbox.visualstudio.com/Giotto/_git/core-dino"
+Homepage = "TODO"

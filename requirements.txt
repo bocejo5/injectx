@@ -1,0 +1,6 @@
+bumpver==2024.1130
+click==8.1.8
+colorama==0.4.6
+injector==0.22.0
+lexid==2021.1006
+toml==0.10.2
