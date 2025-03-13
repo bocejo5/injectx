@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[bumpver]
+current_version = "0.0.7"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "[ROBOT] bump version to {new_version} [ci skip]"
+tag_message = "[ROBOT] {new_version} [ci skip]"
+tag_scope = "default"
+pre_commit_hook = ""
+post_commit_hook = ""
+commit = true
+tag = true
+push = true
+
+[bumpver.file_patterns]
+"src/inject-x/__init__.py" = [
+    '^__version__ = "{version}"$',
+]
+"pyproject.toml" = [
+    '^version = "{version}"$',
+    '^current_version = "{version}"$',
+]
+
+[project]
+name = "inject-x"
+dynamic = ["dependencies"]
+version = "0.0.1"
+authors = [
+  { name="Colageo Mirko", email="mirko.colageo@gmail.com" },
+]
+description = "Natural language request to json converter library"
+readme = "README.md"
+requires-python = ">=3.11.5"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+[project.urls]
+Homepage = "https://almatoolbox.visualstudio.com/Giotto/_git/core-dino"
